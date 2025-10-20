@@ -3,7 +3,7 @@
 #if defined(WIN32)
 #include <windows.h>
 #include <objbase.h>
-#elif defined(__APPLE__)
+#elif defined(__APPLE__) || defined(__linux__)
 #include <uuid/uuid.h>
 #endif
 
@@ -32,7 +32,7 @@ public:
 
 		return str;
 	}
-#elif defined(__APPLE__)
+#elif defined(__APPLE__) || defined(__linux__)
 	static std::string CreateGuid() {
 
 		uuid_t uuid;
