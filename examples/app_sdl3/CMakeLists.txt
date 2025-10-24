@@ -61,7 +61,7 @@ target_sources(app_sdl3 PRIVATE
 
 set_property(TARGET app_sdl3 PROPERTY CXX_STANDARD 20)
 
-target_link_libraries(app_sdl3 PRIVATE SDL3::SDL3)
+target_link_libraries(app_sdl3 PRIVATE SDL3::SDL3 uuid)
 
 target_include_directories(app_sdl3 PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../../src
